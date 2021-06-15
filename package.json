@@ -10,7 +10,10 @@
     "node-sass": "4.14.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+<<<<<<< HEAD
     "react-redux": "^7.2.4",
+=======
+>>>>>>> c1e32a92e86a272fcbd914bc3d29441bd3fc688b
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "redux": "^4.1.0",
