@@ -3,7 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+<<<<<<< HEAD:package.json
     "@ant-design/icons": "4.0.0",
+=======
+    "@ant-design/icons": "^4.6.2",
+>>>>>>> 8d16757e03c98aeef5f3ee5c82d769bdb963596d:client/package.json
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
