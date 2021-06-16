@@ -1,12 +1,3 @@
-<<<<<<< HEAD:src/App.js
-import "./App.css";
-import CombinePages from "./components/CombinePages"
-function App() {
-  return (
-    <div>
-      <CombinePages />
-    </div>
-=======
 import { Route } from 'react-router-dom';
 import PostPage from './login/components/Post/PostPage';
 import LoginPage from './login/components/Login/LoginPage';
@@ -15,6 +6,7 @@ import Profile from './login/components/Profile/Profile';
 import './App.css';
 import Main from "./category/component/Main";
 import Footer from "./Footer";
+import CombinePages from "./components/CombinePages"
 
 function App() {
   return (
@@ -23,12 +15,10 @@ function App() {
       <Route component={LoginPage} path="/login" />
       <Route component={RegisterPage} path="/register" />
       <Route component={Profile} path="/profile" />
-
         <Main />
-
+        <CombinePages />
         <Footer />
     </>
->>>>>>> 8d16757e03c98aeef5f3ee5c82d769bdb963596d:client/src/App.js
   );
 }
 export default App;
