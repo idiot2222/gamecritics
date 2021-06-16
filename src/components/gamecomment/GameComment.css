@@ -1,0 +1,27 @@
+.ant-comment-inner{
+  width: 900px;
+  color: #fff;
+
+}
+
+.ant-comment-content-author-name{
+  /* Han solo */
+  color: #fff;
+}
+
+.ant-list-header{
+  /* reply 갯수 표현 */
+  color: #fff;
+}
+
+.ant-comment{
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  left: 32;
+}
+
+.ant-input{
+  background-color: rgb(199, 216, 216);
+}

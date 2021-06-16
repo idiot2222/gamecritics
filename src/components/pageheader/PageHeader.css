@@ -1,0 +1,19 @@
+.logoAndTitle{
+  width: 700px;
+  margin: 0 auto;
+  /* background-color: #24284b; */
+  padding-bottom: 10px;
+  text-align: left;
+}
+.logo{
+  font-size: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #fff;
+}
+
+.title{
+  color: #fff;
+  font-size: 25px;
+  font-weight: 600;
+}
