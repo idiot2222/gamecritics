@@ -5,6 +5,7 @@ import RegisterPage from './login/components/Register/RegisterPage';
 import Profile from './login/components/Profile/Profile';
 import './App.css';
 import Main from "./category/component/Main";
+import Footer from "./Footer";
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
       <Route component={Profile} path="/profile" />
 
         <Main />
+
+        <Footer />
     </>
   );
 }

@@ -1,0 +1,27 @@
+.footer {
+  width: 100%;
+  height: 200px;
+  bottom: 0;
+  background-color: #2c3e50;
+  border-top: 2px solid #7f8c8d;
+
+  font-size: 30px;
+  line-height: 50px;
+}
+
+.icons {
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  top: 10%;
+  transform: translate(-50%, 0);
+}
+
+.fas {
+  margin: 20px;
+}
+
+.textArea {
+  margin-top: 20px;
+  text-align: center;
+}
