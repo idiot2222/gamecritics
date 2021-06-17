@@ -4,14 +4,17 @@ import "./LeftList.scss";
 
 const LeftList = () => {
   return (
-    <div className="LeftList">
+    <div className="alllist">
+      <div className="backtitle">
+       <div className="listtile">
+         NOTICE
+       </div>
+      </div>
+      <div className="LeftListc">
       <LeftListItems />
-      <LeftListItems />
-      <LeftListItems />
-      <LeftListItems />
-      <LeftListItems />
-      <LeftListItems />
-    </div>
+      
+      </div>
+  </div>
   );
 };
 

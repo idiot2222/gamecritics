@@ -1,13 +1,36 @@
-.LeftList {
+.alllist{
+  margin-left: 10%;
+  background-color: rgb(31, 31, 31);
+  margin-right: 10%;
+  
+  width: 80%;
+}
+
+.backtitle{
+  background-color: rgb(0, 0, 0);
+}
+.listtile{
+ // background-color: rgb(26, 29, 29);
+  text-align: left;
+  height: 3rem;
+  font-size: 2rem;
+  //padding-top: 0.7rem;
+  //padding-bottom: 0.5rem;
+  margin-left: 1rem;
+  color: aliceblue;
+}
+
+
+.LeftListc {
   color: black;
-  float: left;
-  background-color: rgb(157, 170, 189);
-  width: 16rem;
+  
+  width: 90%;
   height: 20rem;
   text-align: center;
-  margin-top: 1rem;
-  margin-right: 3rem;
+  //margin-top: 1rem;
+  margin-right: 1rem;
   margin-left: 1rem;
+
 
   
 }
