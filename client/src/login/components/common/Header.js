@@ -1,9 +1,10 @@
-import React from "react";
-import styled from "styled-components";
-import Responsive from "./Responsive";
-import Button from "./Button";
-import { Link } from "react-router-dom";
-import { BiUser } from "react-icons/bi";
+import React from 'react';
+import styled from 'styled-components';
+import Responsive from './Responsive';
+import Button from './Button';
+import { Link } from 'react-router-dom';
+import { BiUser } from 'react-icons/bi';
+import gclogo from "../../img/logo.png";
 
 const HeaderBlock = styled.div`
   position: fixed;
@@ -61,11 +62,11 @@ const UserInfo = styled.div`
 `;
 
 const style = {
-  fontSize: "1.125rem",
-  color: "white",
-  verticalAlign: "middle",
-  marginRight: "5px",
-  marginBottom: "1px",
+  fontSize: '1.125rem',
+  color: 'white',
+  verticalAlign: 'middle',
+  marginRight: '5px',
+  marginBottom: '1px',
 };
 
 const Header = ({ user, onLogout }) => {
@@ -74,6 +75,7 @@ const Header = ({ user, onLogout }) => {
       <HeaderBlock>
         <Wrapper>
           <Link to="/" className="logo">
+            <img src={gclogo} style={{width: "25px", height: "25px", marginRight: "10px"}} alt="" />
             Gamecritics
           </Link>
           <ul>

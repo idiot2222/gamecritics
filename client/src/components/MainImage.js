@@ -29,7 +29,7 @@ export default class SimpleSlider1 extends Component {
               <img src={Img1} alt="img1" className="Imgset" />
             </Link>
             <div className="img1intro">
-              <div className="img1introduce"> League of Legends</div>
+              <div className="img1introduce">League of Legends</div>
             </div>
           </div>
           <div>
@@ -37,7 +37,7 @@ export default class SimpleSlider1 extends Component {
               <img src={Img2} alt="img2" className="Imgset" />
             </Link>
             <div className="img2intro">
-              <div className="img2introduce"> 배틀 그라운드</div>
+              <div className="img2introduce">배틀 그라운드</div>
             </div>
           </div>
           <div>
