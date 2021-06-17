@@ -16,7 +16,7 @@ const CombinePages = () => {
   return (
     <div className="testContainer">
       <div id="intoPage">
-        <GameCarousel />
+        <GameCarousel CarouselToHeaderTitle="몬스터헌터 스토리즈 2 : 파멸의 날개" />
         <GameInfo />
       </div>
         <SpecDescription/>

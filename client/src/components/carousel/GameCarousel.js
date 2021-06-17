@@ -8,12 +8,12 @@ import imgD from "../../images/imgD.jpg";
 import PageHeader from "../pageheader/PageHeader";
 import "./GameCarousel.scss";
 
-const GameCarousel2 = () => {
+const GameCarousel2 = ( {CarouselToHeaderTitle="몬스터헌터 스토리즈 2 : 파멸의 날개"} ) => {
   
   const [interval] = useState(1500);
   return (
     <div id="gameContainer">
-      <PageHeader></PageHeader>
+      <PageHeader title={CarouselToHeaderTitle}></PageHeader>
 
     {/* https://www.npmjs.com/package/react-responsive-carousel */}
     <Carousel
