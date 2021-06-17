@@ -53,7 +53,7 @@ export default class SimpleSlider1 extends Component {
               <img src={Img4} alt="img4" className="Imgset" />
             </Link>
             <div className="img4intro">
-              <div className="img4introduce"> 원신</div>
+              <div className="img4introduce">용과 같이 5</div>
             </div>
           </div>
           <div>
@@ -61,7 +61,7 @@ export default class SimpleSlider1 extends Component {
               <img src={Img5} alt="img5" className="Imgset" />
             </Link>
             <div className="img5intro">
-              <div className="img5introduce"> 리그오브레전드</div>
+              <div className="img5introduce">원신</div>
             </div>
           </div>
         </Slider>
