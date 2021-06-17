@@ -9,6 +9,7 @@ function todoTemplate() {
     { name: "공지사항", path: "/Notice" },
     { name: "고객센터", path: "/Center" },
   ];
+  
   return (
     <div className="todoTemplate">
       <div className="app-title">Gamecritics</div>

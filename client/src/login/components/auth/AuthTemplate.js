@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
-import palette from '../../lib/styles/palette';
-import { Link } from 'react-router-dom';
+import React from "react";
+import styled from "styled-components";
+import palette from "../../lib/styles/palette";
+import { Link } from "react-router-dom";
 
 const AuthTemplateBlock = styled.div`
   position: absolute;
@@ -15,6 +15,7 @@ const AuthTemplateBlock = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 98;
 `;
 
 const WhiteBox = styled.div`
@@ -31,18 +32,21 @@ const WhiteBox = styled.div`
   width: 360px;
   background: white;
   border-radius: 2px;
+  z-index: 99;
 `;
 
 const AuthTemplate = ({ children }) => {
   return (
-    <AuthTemplateBlock>
-      <WhiteBox>
-        <div className="logo-area">
-          <Link to="/">Home</Link>
-        </div>
-        {children}
-      </WhiteBox>
-    </AuthTemplateBlock>
+    <>
+      <AuthTemplateBlock>
+        <WhiteBox>
+          <div className="logo-area">
+            <Link to="/">Gamecritics</Link>
+          </div>
+          {children}
+        </WhiteBox>
+      </AuthTemplateBlock>
+    </>
   );
 };
 

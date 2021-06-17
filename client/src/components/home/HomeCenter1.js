@@ -5,6 +5,7 @@ import Img2 from "./centerImgs/centerImg2.jpg";
 import Img3 from "./centerImgs/centerImg3.jpg";
 import Img4 from "./centerImgs/centerImg4.jpg";
 import Img5 from "./centerImgs/centerImg5.jpg";
+
 const homecenter1 = () => {
   return (
     <div className="top1">

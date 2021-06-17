@@ -10,7 +10,7 @@ import "./GameCarousel.scss";
 
 const GameCarousel2 = () => {
   
-  const [interval, setInterval] = useState(1500);
+  const [interval] = useState(1500);
   return (
     <div id="gameContainer">
       <PageHeader></PageHeader>

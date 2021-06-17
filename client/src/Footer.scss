@@ -10,18 +10,39 @@
 }
 
 .icons {
+  width: 300px;
+  height: 60px;
   position: relative;
-  display: inline-block;
+
   left: 50%;
-  top: 10%;
   transform: translate(-50%, 0);
 }
 
-.fas {
+.icons > .fas {
   margin: 20px;
 }
 
 .textArea {
-  margin-top: 20px;
   text-align: center;
+}
+
+.topBtn {
+  background-color: #34495e;
+  width: 50px;
+  height: 50px;
+  float: right;
+  margin-right: 10px;
+  border: 2px solid #7f8c8d;
+}
+
+.topBtn > .fas {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 50px;
+
+  &:hover {
+    cursor: pointer;
+  }
 }

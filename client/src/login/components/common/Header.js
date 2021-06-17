@@ -7,8 +7,9 @@ import { Link } from 'react-router-dom';
 const HeaderBlock = styled.div`
   position: fixed;
   width: 100%;
-  background: white;
+  background: rgb(14, 63, 128);
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+  z-index: 100;
 `;
 
 const Wrapper = styled(Responsive)`
@@ -43,7 +44,10 @@ const Header = ({ user, onLogout }) => {
     <>
       <HeaderBlock>
         <Wrapper>
-          <Link to="/" className="logo">Home</Link>
+          <Link to="/" className="logo">Gamecritics</Link>
+          <Link to="/content" className="logo">Game</Link>
+          <Link to="/category" className="logo">카테고리</Link>
+          <Link to="/notice" className="logo">공지사항</Link>
           {user ? (
             <div className="right">
               <UserInfo>{user.username}</UserInfo>

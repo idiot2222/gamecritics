@@ -77,7 +77,7 @@ const RegisterForm = ({ history }) => {
   // user value check
   useEffect(() => {
     if(user) {
-      history.push('/post');
+      history.push('/');
       
       try {
         localStorage.setItem('user', JSON.stringify(user));
