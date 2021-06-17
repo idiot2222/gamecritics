@@ -28,8 +28,6 @@ function App() {
   return (
     <>
       <Router>
-        <HeaderContainer />
-
         <ScrollToTop>
           <HeaderContainer />
           <Route component={Home} path="/" exact />
