@@ -8,7 +8,10 @@ const RemoteCon = props => {
     return (
         <div className="remoteCon">
             <div className="title">
-                {currentChecked === -1 ? "장르별 선택": <i onClick={() => checkFunction(-1)} className="far fa-window-close cancelBtn"></i>}
+                {currentChecked === -1 ? "장르별 선택": <i onClick={() => {
+                    checkFunction(-1)
+                    onChange(1)
+                }} className="far fa-window-close cancelBtn"></i>}
             </div>
             {genres.map(genre => {
                 return (
