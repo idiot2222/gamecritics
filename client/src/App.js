@@ -30,7 +30,7 @@ function App() {
           <Route component={Profile} path="/profile" />
           {/*<Route component={CombinePages} path="/content" />*/}
           {items.map(item => {
-            return <Route path={"/info/" + item.title} key={item.id}><CombinePages key={item.id} title={item.title} genre={item.genre}/></Route>;
+            return <Route path={"/info/" + item.title} key={item.id}><CombinePages key={item.id} item={item}/></Route>;
           })}
           <Route component={Main} path="/category" />
 

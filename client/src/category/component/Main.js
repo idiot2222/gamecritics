@@ -29,6 +29,12 @@ const Main = () => {
   return (
     <>
       <div className="main">
+        <RemoteCon
+            genres={genres}
+            currentChecked={currentChecked}
+            checkFunction={checkFunction}
+            onChange={pageChange}
+        />
         <ItemList
           items={items}
           pageSize={pageSize}
@@ -42,12 +48,6 @@ const Main = () => {
           current={currentPage}
           defaultPageSize={pageSize}
           total={itemCount}
-          onChange={pageChange}
-        />
-        <RemoteCon
-          genres={genres}
-          currentChecked={currentChecked}
-          checkFunction={checkFunction}
           onChange={pageChange}
         />
       </div>

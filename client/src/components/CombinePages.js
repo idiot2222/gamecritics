@@ -11,18 +11,17 @@ import SpecDescription from "./information/SpecDescription";
 // yarn add @ant-design/icons@4.0.0
 
 const CombinePages = props => {
-    const { title, genre } = props;
-
-  return (
-    <div className="testContainer">
-      <div id="intoPage">
-        <GameCarousel CarouselToHeaderTitle={title} />
-        <GameInfo gameGenre={genre.genre} />
-      </div>
-        <SpecDescription/>
-        <GameComment />
-    </div>
-  );
+    const {title, genre, price} = props.item;
+    return (
+        <div className="testContainer">
+            <div id="intoPage">
+                <GameCarousel CarouselToHeaderTitle={title}/>
+                <GameInfo genre={genre.genre} price={price}/>
+            </div>
+            <SpecDescription/>
+            <GameComment/>
+        </div>
+    );
 };
 // CombinePages
 export default CombinePages;
