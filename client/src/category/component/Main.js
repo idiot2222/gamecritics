@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import ItemList from "./ItemList";
 import RemoteCon from "./RemoteCon";
 import "../style/Main.scss";
-import { Pagination } from "antd";
-import HeaderContainer from "../../login/containers/common/HeaderContainer";
+import {Pagination} from "antd";
 
 const Main = () => {
   const genres = [
@@ -44,7 +43,6 @@ const Main = () => {
 
   return (
     <>
-      <HeaderContainer />
 
       <div className="main">
         <ItemList
