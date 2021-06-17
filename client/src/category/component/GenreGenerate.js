@@ -1,9 +1,9 @@
 const genres = [
-    { id: 0, value: "genre01" },
-    { id: 1, value: "genre02" },
-    { id: 2, value: "genre03" },
-    { id: 3, value: "genre04" },
-    { id: 4, value: "genre05" },
+    { id: 0, value: "FPS" },
+    { id: 1, value: "AOS" },
+    { id: 2, value: "Action" },
+    { id: 3, value: "RPG" },
+    { id: 4, value: "Sport" },
 ];
 
 export function getGenres() {
