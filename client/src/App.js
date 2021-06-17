@@ -1,8 +1,7 @@
-import { Route } from "react-router-dom";
+import {BrowserRouter as Router, Route} from "react-router-dom";
 import React from "react";
 
 import "./App.css";
-import { BrowserRouter as Router } from "react-router-dom";
 import ScrollToTop from "./ScrollToTop";
 
 import Home from "./containers/Home";
@@ -15,8 +14,11 @@ import RegisterPage from "./login/components/Register/RegisterPage";
 import Profile from "./login/components/Profile/Profile";
 import Footer from "./Footer";
 import CombinePages from "./components/CombinePages";
+import {getItems} from "./category/component/ItemGenerator";
 
 function App() {
+  const items = getItems();
+
   return (
     <>
       <Router>
@@ -27,7 +29,10 @@ function App() {
           <Route component={LoginPage} path="/login" />
           <Route component={RegisterPage} path="/register" />
           <Route component={Profile} path="/profile" />
-          <Route component={CombinePages} path="/content" />
+          {/*<Route component={CombinePages} path="/content" />*/}
+          {items.map(item => {
+            return <Route path={"/info/" + item.title} key={item.id}><CombinePages key={item.id} title={item.title} genre={item.genre}/></Route>;
+          })}
           <Route component={Main} path="/category" />
 
           <Footer />

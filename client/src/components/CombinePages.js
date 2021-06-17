@@ -11,6 +11,8 @@ import SpecDescription from "./information/SpecDescription";
 // yarn add @ant-design/icons@4.0.0
 
 const CombinePages = () => {
+    // const { title, genre } = props;
+
   return (
     <div className="testContainer">
       <div id="intoPage">
