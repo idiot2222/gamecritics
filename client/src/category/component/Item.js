@@ -4,7 +4,6 @@ import {Card} from "antd";
 
 const Item = props => {
     const item = props.content;
-    const imgUrl = process.env.PUBLIC_URL + "/img/" + item.title +".png";
 
     return (
         <Card

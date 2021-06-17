@@ -3,7 +3,7 @@ import "../style/RemoteCon.scss";
 import RemoteBtn from "./RemoteBtn";
 
 const RemoteCon = props => {
-    const { genres, currentChecked, checkFunction } = props;
+    const { genres, currentChecked, checkFunction, onChange } = props;
 
     return (
         <div className="remoteCon">
@@ -12,7 +12,7 @@ const RemoteCon = props => {
             </div>
             {genres.map(genre => {
                 return (
-                    <RemoteBtn key={genre.id} genre={genre} currentChecked={currentChecked} checkFunction={checkFunction} />
+                    <RemoteBtn key={genre.id} genre={genre} currentChecked={currentChecked} checkFunction={checkFunction} onChange={onChange} />
                 );
             })}
         </div>
