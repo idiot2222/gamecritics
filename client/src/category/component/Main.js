@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import ItemList from "./ItemList";
 import RemoteCon from "./RemoteCon";
 import "../style/Main.scss";

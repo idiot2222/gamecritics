@@ -1,10 +1,40 @@
-.Linktext {
+/*.Linktext {
   color: white;
   margin: 1rem;
+
+}*/
+
+.sublinkmain,.sublinknotice, .sublinkcenter{
+  margin-right:1rem ;
+  color: white;
+  opacity: 0.8;
+  
+}
+.sublink{
+  display: flex;
+  margin: auto;
+  margin-left: 1rem;
+  font-size: 1.0rem;
+  color: white;
+  
+  
+}
+.sublinkmain:hover,.sublinknotice:hover, .sublinkcenter:hover{
+
+opacity: 1.0;
+}
+.sublinkmain:active,.sublinknotice:visited, .sublinkcenter:active{
+
+  opacity: 1.0;
+}
+.titlelink,.sublink,.sublinkmain,.sublinknotice, .sublinkcenter{
+  text-decoration: none !important;
 }
 .app-title {
   margin: 1rem;
   font-size: 2rem;
+  color: white;
+
 }
 .todoTemplate {
   //전체적인그거
@@ -13,9 +43,11 @@
   text-align: left;
   //padding-top: 30px;
   //padding-left: 2rem;
-  background-color: rgb(14, 63, 128);
+  background-color: rgb(37, 48, 63);
   //height: 4rem;
   overflow: hidden;
   display: flex;
   // justify-content: center;
+  
 }
+

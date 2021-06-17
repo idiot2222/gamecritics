@@ -14,7 +14,6 @@ const CombinePages = () => {
   return (
     <div className="testContainer">
       <div id="intoPage">
-        {/* <PageHeader /> in GameCarousel*/}
         <GameCarousel />
         <GameInfo />
       </div>

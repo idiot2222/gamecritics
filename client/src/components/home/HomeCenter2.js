@@ -5,8 +5,10 @@ import "./HomeCenter2.scss";
 const HomeCenter2 = () => {
   return (
     <div className="top2">
-      <div className="topheader1">신작 Game</div>
-      <div className="topcontainer2">
+      <div className="topheader2">
+      
+      <div className="topheadertitle2">신작</div>
+
         <MakeSlider />
       </div>
     </div>

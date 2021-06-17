@@ -1,13 +1,12 @@
 import React from "react";
 import "./Home.scss";
-
 import SimpleSlider from "../components/MainImage";
 import HomeCenter1 from "../components/home/HomeCenter1";
 import HomeCenter2 from "../components/home/HomeCenter2";
 
 const Home = () => {
   return (
-    <>
+    <div className="homeindex">
       <div className="SimpleSlider">
         <SimpleSlider />
       </div>
@@ -17,7 +16,7 @@ const Home = () => {
       <div className="homecenter2">
         <HomeCenter2 />
       </div>
-    </>
+    </div>
   );
 };
 

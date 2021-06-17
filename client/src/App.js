@@ -1,5 +1,12 @@
 import { Route } from "react-router-dom";
 import React from "react";
+// import TodoTemplate from "./components/todoTemplate";
+// import SimpleSlider from "./components/MainImage";
+// import TopHeader from "./components/TopHeader";
+// import Home from "./containers/Home";
+// import GameIntro from "./containers/GamaIntro";
+
+import "./App.css";
 import "./App.css";
 import { BrowserRouter as Router } from "react-router-dom";
 import ScrollToTop from "./ScrollToTop";
@@ -28,6 +35,15 @@ function App() {
           <Route component={CombinePages} path="/content" />
           <Route component={Main} path="/category" />
 
+          {/* <div className="SimpleSlider">
+            <SimpleSlider />
+          </div>
+          <div className="homecenter1">
+            <HomeCenter1 />
+          </div>
+          <div className="homecenter2">
+            <HomeCenter2 />
+          </div> */}
           <Footer />
         </ScrollToTop>
       </Router>

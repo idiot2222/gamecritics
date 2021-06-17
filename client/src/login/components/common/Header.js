@@ -1,8 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
-import Responsive from './Responsive';
-import Button from './Button';
-import { Link } from 'react-router-dom';
+import React from "react";
+import styled from "styled-components";
+import Responsive from "./Responsive";
+import Button from "./Button";
+import { Link } from "react-router-dom";
 
 const HeaderBlock = styled.div`
   position: fixed;
@@ -17,7 +17,7 @@ const Wrapper = styled(Responsive)`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  
+
   .logo {
     font-size: 1.125rem;
     font-weight: 800;
@@ -27,6 +27,17 @@ const Wrapper = styled(Responsive)`
   .right {
     display: flex;
     align-items: center;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    float: left;
+    margin-right: 20px;
   }
 `;
 
@@ -44,10 +55,28 @@ const Header = ({ user, onLogout }) => {
     <>
       <HeaderBlock>
         <Wrapper>
-          <Link to="/" className="logo">Gamecritics</Link>
-          <Link to="/content" className="logo">Game</Link>
-          <Link to="/category" className="logo">카테고리</Link>
-          <Link to="/notice" className="logo">공지사항</Link>
+          <Link to="/" className="logo">
+            Gamecritics
+          </Link>
+          <ul>
+            <li>
+              {" "}
+              <Link to="/content" className="logo">
+                Game
+              </Link>
+            </li>
+            <li>
+              <Link to="/category" className="logo">
+                카테고리
+              </Link>
+            </li>
+            <li>
+              <Link to="/notice" className="logo">
+                공지사항
+              </Link>
+            </li>
+          </ul>
+
           {user ? (
             <div className="right">
               <UserInfo>{user.username}</UserInfo>

@@ -6,7 +6,8 @@ export default function MakeSlide({ img }) {
 }
 const IMG = styled.img`
   //width: 100%;
-  //height: 70vh;
-  width: 18.85%;
+  height: 100%;
+  width: 100%;
   margin: 0.5rem;
+  //margin-left: 2rem;
 `;
