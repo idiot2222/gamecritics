@@ -35,7 +35,6 @@ const homecenter1 = () => {
             </div>
             <div class="Img3title">
               <p className="Img3intro">파이널 판타지 14: 효월의 종언</p>
-             
             </div>
           </div>
           <div className="Img4">
@@ -44,7 +43,6 @@ const homecenter1 = () => {
             </div>
             <div class="Img4title">
               <p className="Img4intro">헌터스 아레나: 레전드</p>
-           
             </div>
           </div>
           <div className="Img5">
@@ -53,7 +51,6 @@ const homecenter1 = () => {
             </div>
             <div class="Img5title">
               <p className="Img5intro">패스 오브 엑자일</p>
-             
             </div>
           </div>
         </div>

@@ -29,6 +29,7 @@ function App() {
     <>
       <Router>
         <ScrollToTop>
+          <HeaderContainer />
           <Route component={Home} path="/" exact />
           <Route component={PostPage} path="/post" />
           <Route component={LoginPage} path="/login" />
@@ -37,7 +38,6 @@ function App() {
           <Route component={CombinePages} path="/content" />
           <Route component={Main} path="/category" />
 
-          <HeaderContainer />
           {/* <div className="SimpleSlider">
             <SimpleSlider />
           </div>

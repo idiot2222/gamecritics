@@ -1,7 +1,6 @@
 import React from "react";
 import "./Home.scss";
 
-import HeaderContainer from "../login/containers/common/HeaderContainer";
 import SimpleSlider from "../components/MainImage";
 import HomeCenter1 from "../components/home/HomeCenter1";
 import HomeCenter2 from "../components/home/HomeCenter2";
@@ -9,7 +8,6 @@ import HomeCenter2 from "../components/home/HomeCenter2";
 const Home = () => {
   return (
     <div className="homeindex">
-      <HeaderContainer />
       <div className="SimpleSlider">
         <SimpleSlider />
       </div>
