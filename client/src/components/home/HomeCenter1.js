@@ -6,6 +6,7 @@ import Img3 from "./centerImgs/centerImg3.jpg";
 import Img4 from "./centerImgs/centerImg4.jpg";
 import Img5 from "./centerImgs/centerImg5.jpg";
 
+<<<<<<< HEAD
 
 
 class homecenter1 extends Component {
@@ -14,6 +15,10 @@ class homecenter1 extends Component {
 
   
  render(){ return (
+=======
+const homecenter1 = () => {
+  return (
+>>>>>>> 308ac244a1187fd7060f84d02c2191d386a024f8
     <div className="top1">
       <div className="topheader1"><div class="topheadertitle">실시간 Bset Game</div></div>
       <div className="topcontainer1">

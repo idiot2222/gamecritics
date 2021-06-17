@@ -1,6 +1,7 @@
 import React from 'react';
 import Item from "./Item";
 import "../style/ItemList.scss";
+import {Link} from "react-router-dom";
 
 const ItemList = props => {
     const { items, pageSize, currentPage, currentChecked, onFilter } = props;
@@ -31,6 +32,9 @@ const ItemList = props => {
 
     const pagedItems = process(items, currentPage, currentChecked);
 
+
+
+
     return (
         <div className="itemList">
             {pagedItems.map(item => {
@@ -39,7 +43,7 @@ const ItemList = props => {
                     genre: item.genre
                 }
                 return (
-                    <Item key={item.id} content={content} />
+                    <Link to={"/info/" + item.title}><Item key={item.id} content={content} /></Link>
                 );
             })}
         </div>
