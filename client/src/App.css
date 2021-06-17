@@ -1,8 +1,5 @@
 @import '~antd/dist/antd.css';
 
-body {
-  background: #282c34;
-}
 
 .App {
   text-align: center;
@@ -20,7 +17,7 @@ body {
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #355697;
   min-height: 100vh;
   display: flex;
   flex-direction: column;

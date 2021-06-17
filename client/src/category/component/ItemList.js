@@ -43,7 +43,7 @@ const ItemList = props => {
                     genre: item.genre
                 }
                 return (
-                    <Link to={"/info/" + item.title}><Item key={item.id} content={content} /></Link>
+                    <Link to={"/info/" + item.title} key={item.id}><Item key={item.id} content={content} /></Link>
                 );
             })}
         </div>
