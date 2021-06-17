@@ -8,8 +8,9 @@ import imgD from "../../images/imgD.jpg";
 import PageHeader from "../pageheader/PageHeader";
 import "./GameCarousel.scss";
 
-const GameCarousel2 = ( {CarouselToHeaderTitle="몬스터헌터 스토리즈 2 : 파멸의 날개"} ) => {
-  
+const GameCarousel2 = props => {
+
+  const { CarouselToHeaderTitle } = props;
   const [interval] = useState(1500);
   return (
     <div id="gameContainer">
@@ -19,7 +20,7 @@ const GameCarousel2 = ( {CarouselToHeaderTitle="몬스터헌터 스토리즈 2 :
     <Carousel
     autoPlay
     infiniteLoop
-    interval={interval}> 
+    interval={interval}>
       <div>
       <img src={imgA} alt="" />
         {/* <p className="legend">Legend 1</p> */}
@@ -38,7 +39,7 @@ const GameCarousel2 = ( {CarouselToHeaderTitle="몬스터헌터 스토리즈 2 :
         <img src={imgD} alt="" />
       </div>
     </Carousel>
-    
+
     </div>
   );
 };
