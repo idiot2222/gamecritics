@@ -2,15 +2,20 @@
   color: white;
 
   font-size: 1.5rem;
-  margin-top: 15rem;
-  margin-left: 15rem;
-  margin-right: 15rem;
-  margin-bottom: 5rem;
-  background-color: rgb(44, 40, 66);
-  width: 90rem;
+  margin-top: 10%;
+  margin-left: 10%;
+  margin-right: 10%;
+  //margin-bottom: 5rem;
+  background-color: rgb(16, 15, 19);
+  width: 80%;
   height: 30rem;
 }
 .topheader2 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  background-color: rgba(32, 31, 32, 0.822);
+  height: 4rem;
+}
+.topheadertitle2 {
   margin-left: 1rem;
-  background-color: rgba(102, 100, 114, 0.822);
 }

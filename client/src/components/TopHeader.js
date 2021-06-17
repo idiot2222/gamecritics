@@ -1,6 +1,6 @@
 import React from "react";
 import './TopHeader.scss';
-
+import TodoTemplate from "./todoTemplate";
 const MenuItem = ({active, children, to}) => (
   <div className="menu-item">
           {children}
@@ -14,6 +14,8 @@ return(
  
 <MenuItem>로그인</MenuItem>  
 <MenuItem>공지사항</MenuItem>
+<TodoTemplate/>
+
 </div>
 
 )

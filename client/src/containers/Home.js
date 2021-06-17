@@ -5,7 +5,7 @@ import HomeCenter1 from "../components/home/HomeCenter1";
 import HomeCenter2 from "../components/home/HomeCenter2";
 const Home = () => {
   return (
-    <div>
+    <div className="homeindex">
       <div className="SimpleSlider">
         <SimpleSlider />
       </div>

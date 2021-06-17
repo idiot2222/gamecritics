@@ -1,7 +1,11 @@
-import React from "react";
+import React from 'react';
 
 const Charge = () => {
-    return <div>공지</div>;
+    return (
+        <div>
+           공지
+        </div>
+    );
 };
 
 export default Charge;

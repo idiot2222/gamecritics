@@ -1,26 +1,28 @@
 .top1 {
   margin-top: 5rem;
-  margin-left: 15rem;
-  margin-right: 15rem;
+  margin-left: 10%;
+  margin-right: 10%;
   margin-bottom: 5rem;
   font-size: 1.5rem;
   color: white;
-  background-color: rgb(44, 40, 66);
-  width: 90rem;
+  background-color: rgb(16, 15, 19);
+  width: 80%;
   height: 30rem;
 }
 .topheader1 {
-  margin-left: 1rem;
+  //margin-left: 1rem;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
-  background-color: rgba(102, 100, 114, 0.822);
+  background-color: rgba(32, 31, 32, 0.822);
 }
-
+.topheadertitle {
+  margin-left: 1rem;
+}
 .topcontainer1_imgs {
   float: left;
   width: 100%;
 
-  background-color: rgba(62, 61, 65, 0.411);
+  background-color: rgba(32, 31, 32, 0.822);
 }
 .Img1,
 .Img2,
@@ -28,8 +30,16 @@
 .Img4,
 .Img5 {
   width: 18.85%;
-  margin: 0.5rem;
+  margin: 0.5%;
   float: left;
+}
+
+.c1 :hover,
+.c2 :hover,
+.c3 :hover,
+.c4 :hover,
+.c5 :hover {
+  opacity: 0.5;
 }
 
 .cimg1,
@@ -39,19 +49,15 @@
 .cimg5 {
   width: 100%;
 }
+
 .Img1intro,
 .Img2intro,
 .Img3intro,
 .Img4intro,
 .Img5intro {
-}
-.Img1intro1,
-.Img2intro1,
-.Img3intro1,
-.Img4intro1,
-.Img5intro1 {
-  font-size: 1rem;
-  margin-top: -1rem;
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+  padding-top: 1.5rem;
 }
 /*
 .Img2 {

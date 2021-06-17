@@ -1,9 +1,34 @@
-.MImg1,
-.MImg2,
-.MImg3,
-.MImg4,
-.MImg5 {
-  width: 18.85%;
-  margin: 0.5rem;
+.MImg6,
+.MImg7,
+.MImg8,
+.MImg9,
+.MImg10,
+.MImg11,
+.MImg12,
+.MImg13 {
+  width: 18.5%;
+  margin: 0.5%;
+  float: left;
+}
+
+.MyImg6:hover,
+.MyImg7:hover,
+.MyImg8:hover,
+.MyImg9:hover,
+.MyImg10:hover,
+.MyImg11:hover,
+.MyImg12:hover,
+.MyImg13:hover {
+  opacity: 0.5;
+}
+.MyImg6,
+.MyImg7,
+.MyImg8,
+.MyImg9,
+.MyImg10,
+.MyImg11,
+.MyImg12,
+.MyImg13 {
+  width: 100%;
   float: left;
 }

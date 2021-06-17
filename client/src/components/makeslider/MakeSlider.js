@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Slide from "./MakeSlide";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import MImg9 from "../home/centerImgs/centerImg9.jpg";
 import MImg10 from "../home/centerImgs/centerImg10.jpg";
 import MImg11 from "../home/centerImgs/centerImg11.jpg";
@@ -11,9 +12,10 @@ import MImg7 from "../home/centerImgs/centerImg7.jpg";
 import MImg8 from "../home/centerImgs/centerImg8.jpg";
 import "./MakeSlider.scss";
 const Bigcontainer = styled.div`
-  width: 90rem;
+  width: 100%;
+  height :30rem;
   display: flex; //이미지들을 가로로 나열합니다.
-
+  padding-top: 1rem;
   margin: auto;
 `;
 const Container = styled.div`
@@ -50,7 +52,8 @@ const Button2 = styled.button`
 `;
 const SliderContainer = styled.div`
   width: 100%;
-  display: flex; //이미지들을 가로로 나열합니다.
+display: flex; //이미지들을 가로로 나열합니다.
+
 `;
 const TOTAL_SLIDES = 1;
 export default function Slider() {
@@ -80,13 +83,21 @@ export default function Slider() {
       <Button1 onClick={prevSlide}>◀</Button1>
       <Container>
         <SliderContainer ref={slideRef}>
+          
           <Slide img={MImg6} />
+          
           <Slide img={MImg7} />
+         
           <Slide img={MImg8} />
+        
           <Slide img={MImg9} />
+          
           <Slide img={MImg10} />
+        
           <Slide img={MImg11} />
+        
           <Slide img={MImg12} />
+          
           <Slide img={MImg13} />
         </SliderContainer>
       </Container>
@@ -94,3 +105,22 @@ export default function Slider() {
     </Bigcontainer>
   );
 }
+
+{/*
+<div className="MyImg6">
+<Slide img={MImg6} /></div>
+<div className="MyImg7">
+<Slide img={MImg7} /></div>
+<div className="MyImg8">
+<Slide img={MImg8} /></div>
+<div className="MyImg9">
+<Slide img={MImg9} /></div>
+<div className="MyImg10">
+<Slide img={MImg10} /></div>
+<div className="MyImg11">
+<Slide img={MImg11} /></div>
+<div className="MyImg12">
+<Slide img={MImg12} /></div>
+<div className="MyImg13">
+<Slide img={MImg13} /></div>
+*/}
