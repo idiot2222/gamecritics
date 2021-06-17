@@ -2,20 +2,20 @@ import React from "react";
 import styled from "styled-components";
 // import palette from "../../lib/styles/palette";
 import { Link } from "react-router-dom";
-import Footer from "../../../Footer";
 
 const AuthTemplateBlock = styled.div`
-  position: absolute;
   left: 0;
   top: 0;
   bottom: 0;
   right: 0;
   background: #1b2838;
+  padding: 10%;
   /* 내부 중앙 정렬 */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 0;
 `;
 
 const WhiteBox = styled.div`
@@ -45,7 +45,6 @@ const AuthTemplate = ({ children }) => {
           {children}
         </WhiteBox>
       </AuthTemplateBlock>
-      <Footer />
     </>
   );
 };
