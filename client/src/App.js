@@ -5,6 +5,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import ScrollToTop from "./ScrollToTop";
 
 import Home from "./containers/Home";
+import Main from "./category/component/Main";
 import HeaderContainer from "./login/containers/common/HeaderContainer";
 // import SimpleSlider from "./components/MainImage";
 // import HomeCenter1 from "./components/home/HomeCenter1";
@@ -21,14 +22,24 @@ function App() {
     <>
       <Router>
         <ScrollToTop>
-          <Route component={Home} path="/" />
+          <Route component={Home} path="/" exact />
           <Route component={PostPage} path="/post" />
           <Route component={LoginPage} path="/login" />
           <Route component={RegisterPage} path="/register" />
           <Route component={Profile} path="/profile" />
           <Route component={CombinePages} path="/content" />
+          <Route component={Main} path="/category" />
 
           <HeaderContainer />
+          {/* <div className="SimpleSlider">
+            <SimpleSlider />
+          </div>
+          <div className="homecenter1">
+            <HomeCenter1 />
+          </div>
+          <div className="homecenter2">
+            <HomeCenter2 />
+          </div> */}
           <Footer />
         </ScrollToTop>
       </Router>
