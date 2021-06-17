@@ -25,18 +25,15 @@ const Main = () => {
         { id: 9, title: "game10", genre: genres[2]},
     ];
 
-    const [currentChecked, setCurrentChecked] = useState(-1);
-    const [itemsState, setItems] = useState({
-        items: items,
-        currentPage: 1
-    });
+    const [currentChecked, setCurrentChecked] = useState(-1); // 현재 check 된 장르
     const [itemCount, setItemCount] = useState(items.length);
+    const [currentPage, setCurrentPage] = useState(1);
 
     function checkFunction(num) {
         setCurrentChecked(num);
     }
     function pageChange(page) {
-        setItems({items, currentPage: page});
+        setCurrentPage(page);
     }
     function filtering(length) {
         setItemCount(length);
@@ -47,9 +44,9 @@ const Main = () => {
 
     return (
         <div className="main">
-            <ItemList items={items} pageSize={pageSize} currentPage={itemsState.currentPage} currentChecked={currentChecked} onFilter={filtering} />
-            <Pagination className="pagination" style={{ marginTop: "50px"}} defaultCurrent={itemsState.currentPage} defaultPageSize={pageSize} total={itemCount} onChange={pageChange}/>
-            <RemoteCon genres={genres} currentChecked={currentChecked} checkFunction={checkFunction} />
+            <ItemList items={items} pageSize={pageSize} currentPage={currentPage} currentChecked={currentChecked} onFilter={filtering} />
+            <Pagination className="pagination" style={{ marginTop: "50px"}} current={currentPage} defaultPageSize={pageSize} total={itemCount} onChange={pageChange}/>
+            <RemoteCon genres={genres} currentChecked={currentChecked} checkFunction={checkFunction} onChange={pageChange} />
         </div>
     );
 }
