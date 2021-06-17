@@ -10,9 +10,11 @@ const HeaderBlock = styled.div`
   background: rgb(14, 63, 128);
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
   z-index: 100;
+  margin: 0 auto;
 `;
 
 const Wrapper = styled(Responsive)`
+  width: 1300px;
   height: 4rem;
   display: flex;
   align-items: center;
@@ -60,14 +62,13 @@ const Header = ({ user, onLogout }) => {
           </Link>
           <ul>
             <li>
-              {" "}
-              <Link to="/content" className="logo">
-                Game
+              <Link to="/category" className="logo">
+                게임
               </Link>
             </li>
             <li>
-              <Link to="/category" className="logo">
-                카테고리
+              <Link to="/notice" className="logo">
+                프로모션
               </Link>
             </li>
             <li>
