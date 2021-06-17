@@ -13,7 +13,7 @@ const RemoteCon = props => {
     return (
         <div className="remoteCon">
             <FilterArea title={"장르별"} items={genres} onPageChange={onChange} onSelected={checkFunction} />
-            <FilterArea title={"필터"} items={filter} onPageChange={onChange} onSelected={checkFunction} />
+            <FilterArea title={"정렬"} items={filter} onPageChange={onChange} onSelected={checkFunction} />
         </div>
     );
 };
