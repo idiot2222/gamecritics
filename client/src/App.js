@@ -7,9 +7,6 @@ import ScrollToTop from "./ScrollToTop";
 import Home from "./containers/Home";
 import Main from "./category/component/Main";
 import HeaderContainer from "./login/containers/common/HeaderContainer";
-// import SimpleSlider from "./components/MainImage";
-// import HomeCenter1 from "./components/home/HomeCenter1";
-// import HomeCenter2 from "./components/home/HomeCenter2";
 import PostPage from "./login/components/Post/PostPage";
 import LoginPage from "./login/components/Login/LoginPage";
 import RegisterPage from "./login/components/Register/RegisterPage";
@@ -22,6 +19,7 @@ function App() {
     <>
       <Router>
         <ScrollToTop>
+          <HeaderContainer />
           <Route component={Home} path="/" exact />
           <Route component={PostPage} path="/post" />
           <Route component={LoginPage} path="/login" />
@@ -30,16 +28,6 @@ function App() {
           <Route component={CombinePages} path="/content" />
           <Route component={Main} path="/category" />
 
-          <HeaderContainer />
-          {/* <div className="SimpleSlider">
-            <SimpleSlider />
-          </div>
-          <div className="homecenter1">
-            <HomeCenter1 />
-          </div>
-          <div className="homecenter2">
-            <HomeCenter2 />
-          </div> */}
           <Footer />
         </ScrollToTop>
       </Router>
