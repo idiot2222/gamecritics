@@ -3,7 +3,6 @@ import ItemList from "./ItemList";
 import RemoteCon from "./RemoteCon";
 import "../style/Main.scss";
 import { Pagination } from "antd";
-import HeaderContainer from "../../login/containers/common/HeaderContainer";
 
 const Main = () => {
   const genres = [
@@ -44,8 +43,6 @@ const Main = () => {
 
   return (
     <>
-      <HeaderContainer />
-
       <div className="main">
         <ItemList
           items={items}
