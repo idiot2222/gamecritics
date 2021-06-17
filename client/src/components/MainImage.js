@@ -53,7 +53,7 @@ export default class SimpleSlider1 extends Component {
               <img src={Img4} alt="img4" className="Imgset" />
             </Link>
             <div className="img4intro">
-              <div className="img4introduce">용과 같이 5</div>
+              <div className="img4introduce">Tom Clancy's EndWar</div>
             </div>
           </div>
           <div>
