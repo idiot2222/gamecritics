@@ -1,33 +1,37 @@
-import { Route } from 'react-router-dom';
-import React from 'react';
-import TodoTemplate from "./components/todoTemplate";
-import SimpleSlider from "./components/MainImage";
-import TopHeader from "./components/TopHeader";
-import Home from "./containers/Home";
-import GameIntro from "./containers/GamaIntro";
+import { Route } from "react-router-dom";
+import React from "react";
+import "./App.css";
+import { BrowserRouter as Router } from "react-router-dom";
+import ScrollToTop from "./ScrollToTop";
 
-import PostPage from './login/components/Post/PostPage';
-import LoginPage from './login/components/Login/LoginPage';
-import RegisterPage from './login/components/Register/RegisterPage';
-import Profile from './login/components/Profile/Profile';
-import './App.css';
-import Main from "./category/component/Main";
+import Home from "./containers/Home";
+import HeaderContainer from "./login/containers/common/HeaderContainer";
+// import SimpleSlider from "./components/MainImage";
+// import HomeCenter1 from "./components/home/HomeCenter1";
+// import HomeCenter2 from "./components/home/HomeCenter2";
+import PostPage from "./login/components/Post/PostPage";
+import LoginPage from "./login/components/Login/LoginPage";
+import RegisterPage from "./login/components/Register/RegisterPage";
+import Profile from "./login/components/Profile/Profile";
 import Footer from "./Footer";
-import CombinePages from "./components/CombinePages"
+import CombinePages from "./components/CombinePages";
 
 function App() {
   return (
     <>
-      <Route component={Home} path="/" />
-      <Route component={PostPage} path="/post" />
-      <Route component={LoginPage} path="/login" />
-      <Route component={RegisterPage} path="/register" />
-      <Route component={Profile} path="/profile" />
-        <Main />
-        <CombinePages />
-        <Footer />
-        <TopHeader />
-        <TodoTemplate></TodoTemplate>
+      <Router>
+        <ScrollToTop>
+          <Route component={Home} path="/" />
+          <Route component={PostPage} path="/post" />
+          <Route component={LoginPage} path="/login" />
+          <Route component={RegisterPage} path="/register" />
+          <Route component={Profile} path="/profile" />
+          <Route component={CombinePages} path="/content" />
+
+          <HeaderContainer />
+          <Footer />
+        </ScrollToTop>
+      </Router>
     </>
   );
 }

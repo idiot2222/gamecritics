@@ -1,3 +1,5 @@
+import React from "react";
+import HeaderContainer from "../login/containers/common/HeaderContainer";
 import GameCarousel from "./carousel/GameCarousel";
 import GameInfo from "./information/GameInfo";
 import GameComment from "./gamecomment/GameComment";
@@ -14,6 +16,7 @@ const CombinePages = () => {
     <div className="testContainer">
       <div id="intoPage">
         {/* <PageHeader /> in GameCarousel*/}
+        <HeaderContainer />
         <GameCarousel />
         <GameInfo />
       </div>
