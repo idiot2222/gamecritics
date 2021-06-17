@@ -1,6 +1,5 @@
 import React from "react";
 import "./Home.scss";
-
 import SimpleSlider from "../components/MainImage";
 import HomeCenter1 from "../components/home/HomeCenter1";
 import HomeCenter2 from "../components/home/HomeCenter2";
