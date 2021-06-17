@@ -25,7 +25,7 @@ export default class SimpleSlider1 extends Component {
       <div className="MainImage">
         <Slider {...Settings} className="SIL1">
           <div>
-            <Link to="/GameIntro">
+            <Link to="/info/lol">
               <img src={Img1} alt="img1" className="Imgset" />
             </Link>
             <div className="img1intro">
@@ -33,7 +33,7 @@ export default class SimpleSlider1 extends Component {
             </div>
           </div>
           <div>
-            <Link to="/GameIntro">
+            <Link to="/info/bag">
               <img src={Img2} alt="img2" className="Imgset" />
             </Link>
             <div className="img2intro">
@@ -41,7 +41,7 @@ export default class SimpleSlider1 extends Component {
             </div>
           </div>
           <div>
-            <Link to="/GameIntro">
+            <Link to="/info/fortnite">
               <img src={Img3} alt="img3" className="Imgset" />
             </Link>
             <div className="img3intro">
@@ -49,7 +49,7 @@ export default class SimpleSlider1 extends Component {
             </div>
           </div>
           <div>
-            <Link to="/GameIntro">
+            <Link to="/info/endwar">
               <img src={Img4} alt="img4" className="Imgset" />
             </Link>
             <div className="img4intro">
@@ -57,7 +57,7 @@ export default class SimpleSlider1 extends Component {
             </div>
           </div>
           <div>
-            <Link to="/GameIntro">
+            <Link to="/info/tekken">
               <img src={Img5} alt="img5" className="Imgset" />
             </Link>
             <div className="img5intro">
