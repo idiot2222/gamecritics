@@ -60,8 +60,13 @@ const UserInfo = styled.div`
   margin-right: 1rem;
 `;
 
-const style = { fontSize: "1.125rem", color: "white", verticalAlign: "middle", marginRight: "5px", marginBottom: "1px" }
-
+const style = {
+  fontSize: "1.125rem",
+  color: "white",
+  verticalAlign: "middle",
+  marginRight: "5px",
+  marginBottom: "1px",
+};
 
 const Header = ({ user, onLogout }) => {
   return (

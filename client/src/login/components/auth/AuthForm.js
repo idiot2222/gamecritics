@@ -1,28 +1,28 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import palette from "../../lib/styles/palette";
 import Button from "../common/Button";
+import { FaFacebook, FaGoogle, FaXbox, FaPlaystation } from "react-icons/fa";
 
 const AuthFormBlock = styled.div`
-  h3 {
+  h4 {
     margin: 0;
-    color: ${palette.gray[8]};
+    color: white;
     margin-bottom: 1rem;
   }
 `;
 
 const StyledInput = styled.input`
-  font-size: 1rem;
+  font-size: 0.8rem;
   border: none;
-  border-bottom: 1px solid ${palette.gray[5]};
+  border-bottom: 1px solid black;
   padding-bottom: 0.5rem;
   outline: none;
   width: 100%;
 
   &:focus {
     color: $oc-teal-7;
-    border-bottom: 1px solid ${palette.gray[7]};
+    border-bottom: 1px solid black;
   }
   & + & {
     margin-top: 1rem;
@@ -32,24 +32,27 @@ const StyledInput = styled.input`
 const Footer = styled.div`
   margin-top: 2rem;
   text-align: right;
+  color: white;
 
   a {
-    color: ${palette.gray[6]};
+    color: white;
     text-decoration: underline;
 
     &:hover {
-      color: ${palette.gray[9]};
+      color: black;
     }
   }
 `;
 
 const ButtonWithMarginTop = styled(Button)`
   margin-top: 1rem;
+  font-size: 0.8rem;
+  text-align: left;
 `;
 
 const textMap = {
-  login: 'Sign In',
-  register: 'Sign Up'
+  login: "로그인",
+  register: "가입",
 };
 
 // 에러 출력
@@ -60,12 +63,20 @@ const ErrorMessage = styled.div`
   margin-top: 1rem;
 `;
 
+const style = {
+  fontSize: "1.125rem",
+  color: "white",
+  verticalAlign: "middle",
+  marginRight: "10px",
+  marginBottom: "1px",
+};
+
 const AuthForm = ({ type, form, onChange, onSubmit, error }) => {
   const text = textMap[type];
 
   return (
     <AuthFormBlock>
-      <h3>{text}</h3>
+      <h4>원하는 {text} 방법을 선택하세요</h4>
       <form onSubmit={onSubmit}>
         <StyledInput
           autoComplete="username"
@@ -82,7 +93,7 @@ const AuthForm = ({ type, form, onChange, onSubmit, error }) => {
           onChange={onChange}
           value={form.password}
         />
-        {type === 'register' && (
+        {type === "register" && (
           <StyledInput
             autoComplete="new-password"
             name="passwordConfirm"
@@ -93,15 +104,36 @@ const AuthForm = ({ type, form, onChange, onSubmit, error }) => {
           />
         )}
         {error && <ErrorMessage>{error}</ErrorMessage>}
-        <ButtonWithMarginTop cyan fullWidth style={{ marginTop: '1rem' }}>
-          {text}
+        <ButtonWithMarginTop fullWidth style={{ marginTop: "1rem" }}>
+          이메일로 {text}
+        </ButtonWithMarginTop>
+        <ButtonWithMarginTop fullWidth style={{ marginTop: "1rem" }}>
+          <FaFacebook style={style} />
+          FACEBOOK(으)로 {text}
+        </ButtonWithMarginTop>
+        <ButtonWithMarginTop fullWidth style={{ marginTop: "1rem" }}>
+          <FaGoogle style={style} />
+          GOOGLE(으)로 {text}
+        </ButtonWithMarginTop>
+        <ButtonWithMarginTop fullWidth style={{ marginTop: "1rem" }}>
+          <FaXbox style={style} />
+          XBOX LIVE(으)로 {text}
+        </ButtonWithMarginTop>
+        <ButtonWithMarginTop fullWidth style={{ marginTop: "1rem" }}>
+          <FaPlaystation style={style} />
+          PLAYSTATION NETWORK(으)로 {text}
         </ButtonWithMarginTop>
       </form>
+
       <Footer>
-        {type === 'login' ? (
-          <Link to="/register">Sign Up</Link>
+        {type === "login" ? (
+          <div>
+            계정이 없으신가요? <Link to="/register">가입</Link>
+          </div>
         ) : (
-          <Link to="/login">Sign In</Link>
+          <div>
+            계정이 없으신가요? <Link to="/login">로그인</Link>
+          </div>
         )}
       </Footer>
     </AuthFormBlock>

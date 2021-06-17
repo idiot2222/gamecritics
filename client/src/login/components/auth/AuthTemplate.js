@@ -1,16 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 // import palette from "../../lib/styles/palette";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import gclogo from "../../img/logo.png";
 
 const AuthTemplateBlock = styled.div`
   left: 0;
   top: 0;
   bottom: 0;
   right: 0;
-  background: #1b2838;
+  background: #111111;
   padding: 10%;
-  
+
   /* 내부 중앙 정렬 */
   display: flex;
   flex-direction: column;
@@ -31,7 +32,7 @@ const WhiteBox = styled.div`
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.025);
   padding: 2rem;
   width: 360px;
-  background-color: #3e5c81;
+  background-color: #252525;
   border-radius: 2px;
 `;
 
@@ -41,7 +42,7 @@ const AuthTemplate = ({ children }) => {
       <AuthTemplateBlock>
         <WhiteBox>
           <div className="logo-area">
-            <Link to="/">GameCritics</Link>
+            <img src={gclogo} width="40px" height="40px" alt="" />
           </div>
           {children}
         </WhiteBox>
