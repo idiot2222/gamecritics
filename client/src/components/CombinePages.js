@@ -12,11 +12,12 @@ import SpecDescription from "./information/SpecDescription";
 
 const CombinePages = props => {
     const {title, genre, price} = props.item;
+
     return (
         <div className="testContainer">
             <div id="intoPage">
                 <GameCarousel CarouselToHeaderTitle={title}/>
-                <GameInfo genre={genre.genre} price={price}/>
+                <GameInfo genre={genre.value} price={price}/>
             </div>
             <SpecDescription/>
             <GameComment/>
