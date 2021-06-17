@@ -55,7 +55,7 @@ const SliderContainer = styled.div`
 
   display: flex; //이미지들을 가로로 나열합니다.
 `;
-const TOTAL_SLIDES = 1;
+const TOTAL_SLIDES = 5;
 export default function Slider() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slideRef = useRef(null);
@@ -65,14 +65,14 @@ export default function Slider() {
       // 더 이상 넘어갈 슬라이드가 없으면 슬라이드를 초기화합니다.
       setCurrentSlide(0);
     } else {
-      setCurrentSlide(currentSlide + 1);
+      setCurrentSlide(currentSlide + 5);
     }
   };
   const prevSlide = () => {
     if (currentSlide === 0) {
       setCurrentSlide(TOTAL_SLIDES);
     } else {
-      setCurrentSlide(currentSlide - 1);
+      setCurrentSlide(currentSlide - 5);
     }
   };
   useEffect(() => {
