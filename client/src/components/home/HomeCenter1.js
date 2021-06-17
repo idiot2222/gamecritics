@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import "./HomeCenter1.scss";
 import Img1 from "./centerImgs/centerImg1.jpg";
 import Img2 from "./centerImgs/centerImg2.jpg";
@@ -18,7 +18,6 @@ const homecenter1 = () => {
             </div>
             <div class="Img1title">
               <p className="Img1intro">디아블로4</p>
-             
             </div>
           </div>
           <div className="Img2">

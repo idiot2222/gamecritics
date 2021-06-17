@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import Slide from "./MakeSlide";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 import MImg9 from "../home/centerImgs/centerImg9.jpg";
 import MImg10 from "../home/centerImgs/centerImg10.jpg";
 import MImg11 from "../home/centerImgs/centerImg11.jpg";
@@ -11,6 +10,7 @@ import MImg6 from "../home/centerImgs/centerImg6.jpg";
 import MImg7 from "../home/centerImgs/centerImg7.jpg";
 import MImg8 from "../home/centerImgs/centerImg8.jpg";
 import "./MakeSlider.scss";
+
 const Bigcontainer = styled.div`
   width: 100%;
   height: 30rem;
@@ -115,8 +115,7 @@ export default function Slider() {
   );
 }
 
-{
-  /*
+/* {
 <div className="MyImg6">
 <Slide img={MImg6} /></div>
 <div className="MyImg7">
@@ -133,5 +132,6 @@ export default function Slider() {
 <Slide img={MImg12} /></div>
 <div className="MyImg13">
 <Slide img={MImg13} /></div>
-*/
+
 }
+ */
