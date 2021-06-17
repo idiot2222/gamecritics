@@ -54,7 +54,7 @@ const LoginForm = ({ history }) => {
 
   useEffect(() => {
     if(user) {
-      history.push('/post');
+      history.push('/');
 
       try {
         localStorage.setItem('user', JSON.stringify(user));
