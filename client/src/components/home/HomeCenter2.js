@@ -7,7 +7,7 @@ const HomeCenter2 = () => {
     <div className="top2">
       <div className="topheader2">
       
-      <div className="topheadertitle2">신작</div>
+      <div className="topheadertitle2">Gamecritics 신작</div>
 
         <MakeSlider />
       </div>

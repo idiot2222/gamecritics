@@ -6,6 +6,7 @@
     
     max-width: 100rem;
     max-height: 60rem;*/
+    
   width: 90rem;
 
   padding: 2rem;
@@ -29,7 +30,7 @@
 }
 
 .slick-list {
-  background: black;
+  background: #111111;
   position: relative;
 
   display: block;
