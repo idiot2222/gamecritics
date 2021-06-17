@@ -46,6 +46,7 @@ const Header = ({ user, onLogout }) => {
         <Wrapper>
           <Link to="/" className="logo">Gamecritics</Link>
           <Link to="/content" className="logo">Game</Link>
+          <Link to="/category" className="logo">카테고리</Link>
           <Link to="/notice" className="logo">공지사항</Link>
           {user ? (
             <div className="right">
