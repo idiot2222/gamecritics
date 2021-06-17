@@ -4,6 +4,11 @@ import GameComment from "./gamecomment/GameComment";
 import "./CombinePages.scss";
 import SpecDescription from "./information/SpecDescription";
 
+// Add List
+// yarn add antd
+// yarn add react-responsive-carousel
+// yarn add @ant-design/icons@4.0.0
+
 const CombinePages = () => {
   return (
     <div className="testContainer">
