@@ -3,15 +3,15 @@ import "../style/Item.scss";
 import {Card} from "antd";
 
 const Item = props => {
-    const item = props.content;
+    const { title, price } = props.content;
 
     return (
         <Card
             hoverable
             className="item"
-            cover={<img alt={item.title+"의 이미지"} src={process.env.PUBLIC_URL + "/img/" + item.title +".png"}/>}
+            cover={<img alt={title+"의 이미지"} src={process.env.PUBLIC_URL + "/img/" + title +".png"}/>}
         >
-            {item.title}
+            {title} {price}원
         </Card>
     );
 }

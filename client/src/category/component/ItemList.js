@@ -4,14 +4,38 @@ import "../style/ItemList.scss";
 import {Link} from "react-router-dom";
 
 const ItemList = props => {
-    const { items, pageSize, currentPage, currentChecked, onFilter } = props;
+    const { items, pageSize, currentPage, currentChecked, sorting, onFilter } = props;
 
-    function process(items, currentPage, currentChecked) {
+    function process(items, currentPage, currentChecked, sorting) {
         let copy = items.slice();
 
         if(currentChecked !== -1) {
             copy = copy.filter(item => item.genre.id === currentChecked);
         }
+        if(sorting === 0) {
+            copy = copy.sort();
+        }
+        else if(sorting === 1) {
+            copy = copy.sort((x, y) => {
+                if(parseInt(x.price) > parseInt(y.price)) {
+                    return 1;
+                }
+                else if(parseInt(x.price) < parseInt(y.price)) {
+                    return -1;
+                }
+            });
+        }
+        else if(sorting === 2) {
+            copy = copy.sort((x, y) => {
+                if(parseInt(x.price) > parseInt(y.price)) {
+                    return -1;
+                }
+                else if(parseInt(x.price) < parseInt(y.price)) {
+                    return 1;
+                }
+            });
+        }
+
         onFilter(copy.length);
 
         const startIdx = (currentPage-1) * pageSize;
@@ -30,7 +54,7 @@ const ItemList = props => {
         return arr;
     }
 
-    const pagedItems = process(items, currentPage, currentChecked);
+    const pagedItems = process(items, currentPage, currentChecked, sorting);
 
 
 
@@ -40,7 +64,7 @@ const ItemList = props => {
             {pagedItems.map(item => {
                 const content = {
                     title: item.title,
-                    genre: item.genre
+                    price: item.price
                 }
                 return (
                     <Link to={"/info/" + item.title} key={item.id}><Item key={item.id} content={content} /></Link>

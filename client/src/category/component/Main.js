@@ -11,11 +11,17 @@ const Main = () => {
   const genres = getGenres();
 
   const [currentChecked, setCurrentChecked] = useState(-1); // 현재 check 된 장르
+  const [sorting, setSorting] = useState(-1); // sorting 기준
   const [itemCount, setItemCount] = useState(items.length);
   const [currentPage, setCurrentPage] = useState(1);
 
-  function checkFunction(num) {
-    setCurrentChecked(num);
+  function checkFunction(num, filter) {
+    if(filter === "장르별") {
+      setCurrentChecked(num);
+    }
+    else {
+      setSorting(num);
+    }
   }
   function pageChange(page) {
     setCurrentPage(page);
@@ -40,6 +46,7 @@ const Main = () => {
           pageSize={pageSize}
           currentPage={currentPage}
           currentChecked={currentChecked}
+          sorting={sorting}
           onFilter={filtering}
         />
         <Pagination
