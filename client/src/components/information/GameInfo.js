@@ -4,8 +4,9 @@ import "./GameInfo.scss";
 import "antd/dist/antd.css";
 import { DownloadOutlined } from '@ant-design/icons';
 
-const GameInfo = () => {
+const GameInfo = props => {
   const [purchase, setPurchase] = React.useState(false);
+  const { genre } = props;
 
   // 구매버튼 클릭 시
   const PurchaseAlert = () => {
@@ -27,8 +28,8 @@ const GameInfo = () => {
   };
 
   return (
-    <div class="right_ImageDescription">
-      <div class="rightImage">
+    <div className="right_ImageDescription">
+      <div className="rightImage">
         <img src={dragon} alt="" style={{ width: "300px" }}></img>
       </div>
       <div class="rightDescription">
@@ -39,19 +40,18 @@ const GameInfo = () => {
           시리즈 제2탄인 본 타이틀에서는 새로운 인연의 이야기가 막을 엽니다.
         </p>
         <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry.
+          {genre}
         </p>
-        <button value="구매하기" class="buyButton" onClick={PurchaseAlert}>
-          <span class="buttonText">구매하기</span>
+        <button value="구매하기" className="buyButton" onClick={PurchaseAlert}>
+          <span className="buttonText">구매하기</span>
         </button>
         <button 
         value="다운로드" 
-        class="DownloadButton" 
+        className="DownloadButton" 
         title="다운로드 시작"
         onClick={DownloadAlert}
         >
-          <span class="gameDownload"><DownloadOutlined /></span>
+          <span className="gameDownload"><DownloadOutlined /></span>
         </button>
         {/* 구매하기 onClick -> setBuy = true -> 다운로드 onClick -> alert("다운시작")  */}
         {/*                     setBuy = flase -> 다운로드 onClick -> alert("게임을 구매하세요")  */}
