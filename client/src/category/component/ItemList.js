@@ -23,6 +23,7 @@ const ItemList = props => {
                 else if(parseInt(x.price) < parseInt(y.price)) {
                     return -1;
                 }
+                return 0;
             });
         }
         else if(sorting === 2) {
@@ -33,6 +34,7 @@ const ItemList = props => {
                 else if(parseInt(x.price) < parseInt(y.price)) {
                     return 1;
                 }
+                return 0;
             });
         }
 

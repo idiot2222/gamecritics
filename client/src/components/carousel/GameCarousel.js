@@ -9,8 +9,6 @@ const GameCarousel2 = props => {
   const { title } = props;
   const [interval] = useState(1500);
 
-  console.log(process.env.PUBLIC_URL + "/img/" + title + "_01.png");
-
   return (
     <div id="gameContainer">
       <PageHeader title={title}></PageHeader>
