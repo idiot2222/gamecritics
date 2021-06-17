@@ -13,7 +13,7 @@ import MImg8 from "../home/centerImgs/centerImg8.jpg";
 import "./MakeSlider.scss";
 const Bigcontainer = styled.div`
   width: 100%;
-  height :30rem;
+  height: 30rem;
   display: flex; //이미지들을 가로로 나열합니다.
   padding-top: 1rem;
   margin: auto;
@@ -51,14 +51,15 @@ const Button2 = styled.button`
   }
 `;
 const SliderContainer = styled.div`
-  width: 100%;
-display: flex; //이미지들을 가로로 나열합니다.
+  width: 160%;
 
+  display: flex; //이미지들을 가로로 나열합니다.
 `;
 const TOTAL_SLIDES = 1;
 export default function Slider() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slideRef = useRef(null);
+
   const nextSlide = () => {
     if (currentSlide >= TOTAL_SLIDES) {
       // 더 이상 넘어갈 슬라이드가 없으면 슬라이드를 초기화합니다.
@@ -76,29 +77,37 @@ export default function Slider() {
   };
   useEffect(() => {
     slideRef.current.style.transition = "all 0.5s ease-in-out";
-    slideRef.current.style.transform = `translateX(-${currentSlide}00%)`; // 백틱을 사용하여 슬라이드로 이동하는 애니메이션을 만듭니다.
+    slideRef.current.style.transform = `translateX(-${currentSlide}0%)`; // 백틱을 사용하여 슬라이드로 이동하는 애니메이션을 만듭니다.
   }, [currentSlide]);
   return (
     <Bigcontainer>
       <Button1 onClick={prevSlide}>◀</Button1>
       <Container>
         <SliderContainer ref={slideRef}>
-          
-          <Slide img={MImg6} />
-          
-          <Slide img={MImg7} />
-         
-          <Slide img={MImg8} />
-        
-          <Slide img={MImg9} />
-          
-          <Slide img={MImg10} />
-        
-          <Slide img={MImg11} />
-        
-          <Slide img={MImg12} />
-          
-          <Slide img={MImg13} />
+          <div className="MyImg6">
+            <Slide img={MImg6} />
+          </div>
+          <div className="MyImg7">
+            <Slide img={MImg7} />
+          </div>
+          <div className="MyImg8">
+            <Slide img={MImg8} />
+          </div>
+          <div className="MyImg9">
+            <Slide img={MImg9} />
+          </div>
+          <div className="MyImg10">
+            <Slide img={MImg10} />
+          </div>
+          <div className="MyImg11">
+            <Slide img={MImg11} />
+          </div>
+          <div className="MyImg12">
+            <Slide img={MImg12} />
+          </div>
+          <div className="MyImg13">
+            <Slide img={MImg13} />
+          </div>
         </SliderContainer>
       </Container>
       <Button2 onClick={nextSlide}>▶</Button2>
@@ -106,7 +115,8 @@ export default function Slider() {
   );
 }
 
-{/*
+{
+  /*
 <div className="MyImg6">
 <Slide img={MImg6} /></div>
 <div className="MyImg7">
@@ -123,4 +133,5 @@ export default function Slider() {
 <Slide img={MImg12} /></div>
 <div className="MyImg13">
 <Slide img={MImg13} /></div>
-*/}
+*/
+}
