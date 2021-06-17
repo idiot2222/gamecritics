@@ -1,4 +1,3 @@
-import React from 'react';
 import {getGenres} from "./GenreGenerate";
 
 const genres = getGenres();

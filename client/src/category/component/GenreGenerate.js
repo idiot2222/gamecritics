@@ -1,5 +1,3 @@
-import React from 'react';
-
 const genres = [
     { id: 0, genre: "genre01" },
     { id: 1, genre: "genre02" },

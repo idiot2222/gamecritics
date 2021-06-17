@@ -10,6 +10,7 @@ const AuthTemplateBlock = styled.div`
   right: 0;
   background: #1b2838;
   padding: 10%;
+  
   /* 내부 중앙 정렬 */
   display: flex;
   flex-direction: column;
