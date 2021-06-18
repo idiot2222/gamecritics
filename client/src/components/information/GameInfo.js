@@ -40,7 +40,7 @@ const GameInfo = props => {
           {/*시리즈 제2탄인 본 타이틀에서는 새로운 인연의 이야기가 막을 엽니다.*/}
         </p>장르: {genre} {price}원
         <button value="구매하기" className="buyButton" onClick={PurchaseAlert}>
-          <span className="buttonText"></span>
+          <span className="buttonText">구매하기</span>
         </button>
         <button
         value="다운로드"
