@@ -7,7 +7,7 @@ const LeftList = () => {
     <div className="alllist">
       <div className="backtitle">
        <div className="listtile">
-         NOTICE
+         NEWS
        </div>
       </div>
       <div className="LeftListc">
