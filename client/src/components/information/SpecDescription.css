@@ -3,7 +3,8 @@ table{
   width: 700px;
   text-align: center;
   margin: 0 auto;
-  margin-bottom: 40px;
+  margin-top: 80px;
+  margin-bottom: 80px;
   /* 테두리 */
   /* border-top: 1px solid #000; */
   border-collapse: collapse;
