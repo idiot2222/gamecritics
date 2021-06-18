@@ -1,12 +1,11 @@
 import React from "react";
-import dragon from "../../images/dragon.jpg";
 import "./GameInfo.scss";
 import "antd/dist/antd.css";
 import { DownloadOutlined } from '@ant-design/icons';
 
 const GameInfo = props => {
   const [purchase, setPurchase] = React.useState(false);
-  const { genre, price, text } = props;
+  const { title, genre, price, text } = props;
 
   // 구매버튼 클릭 시
   const PurchaseAlert = () => {
@@ -30,7 +29,7 @@ const GameInfo = props => {
   return (
     <div className="right_ImageDescription">
       <div className="rightImage">
-        <img src={dragon} alt="" style={{ width: "300px" }}></img>
+        <img src={process.env.PUBLIC_URL + "/img/" + title + "_01.png"} alt="" style={{ width: "300px" }}></img>
       </div>
       <div className="rightDescription">
         {/* title 전달 */}
@@ -41,7 +40,7 @@ const GameInfo = props => {
           {/*시리즈 제2탄인 본 타이틀에서는 새로운 인연의 이야기가 막을 엽니다.*/}
         </p>장르: {genre} {price}원
         <button value="구매하기" className="buyButton" onClick={PurchaseAlert}>
-          <span className="buttonText">구매하기</span>
+          <span className="buttonText"></span>
         </button>
         <button
         value="다운로드"

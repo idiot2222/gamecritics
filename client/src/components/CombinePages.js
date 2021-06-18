@@ -17,7 +17,7 @@ const CombinePages = props => {
         <div className="testContainer">
             <div id="intoPage">
                 <GameCarousel title={title} name={name}/>
-                <GameInfo genre={genre.value} price={price} text={text}/>
+                <GameInfo title={title} genre={genre.value} price={price} text={text}/>
             </div>
             <SpecDescription/>
             <GameComment/>

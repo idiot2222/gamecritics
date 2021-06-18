@@ -6,14 +6,14 @@ import {Link} from "react-router-dom";
 const ItemList = props => {
     const { items, pageSize, currentPage, currentChecked, sorting, onFilter } = props;
 
-    function process(items, currentPage, currentChecked, sorting) {
+    function process(items, currentPage, currentChecked, sorting) { // 필터 + 정렬
         let copy = items.slice();
 
         if(currentChecked !== -1) {
-            copy = copy.filter(item => item.genre.id === currentChecked);
+            copy = copy.filter(item => item.genre.id === currentChecked);  //  선택된 장르만 filter
         }
 
-        if(sorting === 0) {
+        if(sorting === 0) {  // 가나다 순
             copy = copy.sort((x, y) => {
                 if(x.name > y.name) {
                     return 1;
@@ -48,7 +48,7 @@ const ItemList = props => {
             });
         }
 
-        onFilter(copy.length);
+        onFilter(copy.length); // 이거 위치가 아쉽지만, 어디서 호출시켜야 되는지 모르겠음
 
         const startIdx = (currentPage-1) * pageSize;
         let endIdx = startIdx + pageSize;
@@ -67,8 +67,6 @@ const ItemList = props => {
     }
 
     const pagedItems = process(items, currentPage, currentChecked, sorting);
-
-
 
 
     return (
