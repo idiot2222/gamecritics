@@ -1,16 +1,16 @@
-.alllist{
+.alllist {
   margin-left: 10%;
-  background-color: rgb(31, 31, 31);
+  background-color: rgb(63, 59, 59);
   margin-right: 10%;
-  
+  // height: 10%;
   width: 80%;
 }
 
-.backtitle{
+.backtitle {
   background-color: rgb(0, 0, 0);
 }
-.listtile{
- // background-color: rgb(26, 29, 29);
+.listtile {
+  // background-color: rgb(26, 29, 29);
   text-align: left;
   height: 3rem;
   font-size: 2rem;
@@ -20,17 +20,13 @@
   color: aliceblue;
 }
 
-
 .LeftListc {
   color: black;
-  
+
   width: 90%;
-  height: 20rem;
+  height: 15rem;
   text-align: center;
   //margin-top: 1rem;
   margin-right: 1rem;
   margin-left: 1rem;
-
-
-  
 }
