@@ -3,7 +3,7 @@ import "../style/Item.scss";
 import {Card} from "antd";
 
 const Item = props => {
-    const { title, price, name } = props.content;
+    const { title, price, name } = props.item;
 
     return (
         <Card

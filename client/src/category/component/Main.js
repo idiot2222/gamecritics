@@ -12,9 +12,9 @@ const Main = () => {
   const pageSize = 4;
 
   const [currentChecked, setCurrentChecked] = useState(-1); // 현재 check 된 장르
-  const [sorting, setSorting] = useState(-1); // sorting 기준
-  const [itemCount, setItemCount] = useState(items.length); // items 배열 내의 아이템 개수
-  const [currentPage, setCurrentPage] = useState(1); // Pagination 현재 페이지
+  const [sorting, setSorting] = useState(-1);               // sorting 기준
+  const [itemCount, setItemCount] = useState(items.length);          // items 배열 내의 아이템 개수
+  const [currentPage, setCurrentPage] = useState(1);        // Pagination 현재 페이지
 
   function checkFunction(num, filter) {
     if(filter === "장르별") {

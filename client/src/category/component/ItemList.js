@@ -6,14 +6,16 @@ import {Link} from "react-router-dom";
 const ItemList = props => {
     const { items, pageSize, currentPage, currentChecked, sorting, onFilter } = props;
 
-    function process(items, currentPage, currentChecked, sorting) { // 필터 + 정렬
+    // ItemList.js
+    // items 배열에서 정렬과 필터를 적용한 배열을 return
+    function process(items, currentPage, currentChecked, sorting) {
         let copy = items.slice();
 
         if(currentChecked !== -1) {
-            copy = copy.filter(item => item.genre.id === currentChecked);  //  선택된 장르만 filter
-        }
+            copy = copy.filter(item => item.genre.id === currentChecked);
+        } // 선택된 장르만 filter
 
-        if(sorting === 0) {  // 가나다 순
+        if(sorting === 0) {
             copy = copy.sort((x, y) => {
                 if(x.name > y.name) {
                     return 1;
@@ -24,8 +26,8 @@ const ItemList = props => {
                 return 0;
             });
             console.log(copy);
-        }
-        else if(sorting === 1) {  // 가격 내림차순
+        }         // 가나다 순 정렬
+        else if(sorting === 1) {
             copy = copy.sort((x, y) => {
                 if(parseInt(x.price) > parseInt(y.price)) {
                     return 1;
@@ -35,8 +37,8 @@ const ItemList = props => {
                 }
                 return 0;
             });
-        }
-        else if(sorting === 2) {  // 가격 오름차순
+        }    // 가격 내림차순
+        else if(sorting === 2) {
             copy = copy.sort((x, y) => {
                 if(parseInt(x.price) > parseInt(y.price)) {
                     return -1;
@@ -46,9 +48,9 @@ const ItemList = props => {
                 }
                 return 0;
             });
-        }
+        }    // 가격 오름차순
 
-        onFilter(copy.length); // 이거 위치가 아쉽지만, 어디서 호출시켜야 되는지 모르겠음
+        onFilter(copy.length);
 
         const startIdx = (currentPage-1) * pageSize;
         let endIdx = startIdx + pageSize;
@@ -72,13 +74,10 @@ const ItemList = props => {
     return (
         <div className="itemList">
             {pagedItems.map(item => {
-                const content = {
-                    title: item.title,
-                    price: item.price,
-                    name: item.name
-                }
                 return (
-                    <Link to={"/info/" + item.title} key={item.id}><Item key={item.id} content={content} /></Link>
+                    <Link to={"/info/" + item.title} key={item.id}>
+                        <Item key={item.id} item={item} />
+                    </Link>
                 );
             })}
         </div>
