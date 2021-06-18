@@ -11,12 +11,12 @@ import SpecDescription from "./information/SpecDescription";
 // yarn add @ant-design/icons@4.0.0
 
 const CombinePages = props => {
-    const {title, genre, price, text} = props.item;
+    const {title, genre, price, name, text} = props.item;
 
     return (
         <div className="testContainer">
             <div id="intoPage">
-                <GameCarousel title={title}/>
+                <GameCarousel title={title} name={name}/>
                 <GameInfo genre={genre.value} price={price} text={text}/>
             </div>
             <SpecDescription/>

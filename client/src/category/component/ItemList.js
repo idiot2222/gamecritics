@@ -12,10 +12,20 @@ const ItemList = props => {
         if(currentChecked !== -1) {
             copy = copy.filter(item => item.genre.id === currentChecked);
         }
+
         if(sorting === 0) {
-            copy = copy.sort();
+            copy = copy.sort((x, y) => {
+                if(x.name > y.name) {
+                    return 1;
+                }
+                else if(x.name < y.name) {
+                    return -1;
+                }
+                return 0;
+            });
+            console.log(copy);
         }
-        else if(sorting === 1) {
+        else if(sorting === 1) {  // 가격 내림차순
             copy = copy.sort((x, y) => {
                 if(parseInt(x.price) > parseInt(y.price)) {
                     return 1;
@@ -26,7 +36,7 @@ const ItemList = props => {
                 return 0;
             });
         }
-        else if(sorting === 2) {
+        else if(sorting === 2) {  // 가격 오름차순
             copy = copy.sort((x, y) => {
                 if(parseInt(x.price) > parseInt(y.price)) {
                     return -1;
@@ -66,7 +76,8 @@ const ItemList = props => {
             {pagedItems.map(item => {
                 const content = {
                     title: item.title,
-                    price: item.price
+                    price: item.price,
+                    name: item.name
                 }
                 return (
                     <Link to={"/info/" + item.title} key={item.id}><Item key={item.id} content={content} /></Link>

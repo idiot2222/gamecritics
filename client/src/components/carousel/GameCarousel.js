@@ -6,12 +6,12 @@ import "./GameCarousel.scss";
 
 const GameCarousel2 = props => {
 
-  const { title } = props;
+  const { title, name } = props;
   const [interval] = useState(1500);
 
   return (
     <div id="gameContainer">
-      <PageHeader title={title}></PageHeader>
+      <PageHeader title={name}></PageHeader>
 
     {/* https://www.npmjs.com/package/react-responsive-carousel */}
     <Carousel
