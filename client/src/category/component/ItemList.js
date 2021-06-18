@@ -25,7 +25,6 @@ const ItemList = props => {
                 }
                 return 0;
             });
-            console.log(copy);
         }         // 가나다 순 정렬
         else if(sorting === 1) {
             copy = copy.sort((x, y) => {
