@@ -4,7 +4,7 @@ import Responsive from './Responsive';
 import Button from './Button';
 import { Link } from 'react-router-dom';
 import { BiUser } from 'react-icons/bi';
-import gclogo from "../../img/logo.png";
+import gclogo from '../../img/logo.png';
 
 const HeaderBlock = styled.div`
   position: fixed;
@@ -59,6 +59,7 @@ const Spacer = styled.div`
 const UserInfo = styled.div`
   font-weight: 800;
   margin-right: 1rem;
+  color: white;
 `;
 
 const style = {
@@ -75,7 +76,11 @@ const Header = ({ user, onLogout }) => {
       <HeaderBlock>
         <Wrapper>
           <Link to="/" className="logo">
-            <img src={gclogo} style={{width: "25px", height: "25px", marginRight: "10px"}} alt="" />
+            <img
+              src={gclogo}
+              style={{ width: '25px', height: '25px', marginRight: '10px' }}
+              alt=""
+            />
             Gamecritics
           </Link>
           <ul>
@@ -98,6 +103,7 @@ const Header = ({ user, onLogout }) => {
 
           {user ? (
             <div className="right">
+              <BiUser style={style} />
               <UserInfo>{user.username}</UserInfo>
               <Button onClick={onLogout}>Logout</Button>
             </div>

@@ -77,7 +77,7 @@ const AuthForm = ({ type, form, onChange, onSubmit, error }) => {
   return (
     <AuthFormBlock>
       <h4>원하는 {text} 방법을 선택하세요</h4>
-      <form onSubmit={onSubmit}>
+      <form onSubmit={onSubmit}>-
         <StyledInput
           autoComplete="username"
           name="username"
