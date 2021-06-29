@@ -8,6 +8,8 @@
   - create-react-app
   - React-Router-DOM
 - SCSS
+- Node.js
+- MongoDB
 
 ## 기능
 - 회원 관리 기능
